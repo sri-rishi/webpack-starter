@@ -4,6 +4,7 @@
   "description": "\"Vanilla JS app written with morden tools\"",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rishi Srivastava",
