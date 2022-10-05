@@ -5,3 +5,11 @@ h1 {
 h2 {
     color: rebeccapurple;
 }
+
+.logo {
+    width: 20rem;
+}
+
+img {
+    width: 100%;
+}
