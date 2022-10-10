@@ -11,6 +11,16 @@ const webpackConfig = {
         clean: true
     },
 
+    performance: {
+        hints: false,
+        maxEntrypointSize: 50000,
+        maxAssetSize: 50000
+    },
+    
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
+
     module: {
         rules: [
             {
@@ -57,7 +67,7 @@ const webpackConfig = {
             extensions: "js",
             exclude: "node_modules",
             files: "src"
-        })
+        }),
     ],
 
     optimization: {
