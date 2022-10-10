@@ -1,11 +1,13 @@
-export const Info = () => {
+const Info = () => {
     return (
-        <div>
+        <div className="info">
             <p>Hey there it's a webpack starter app</p>
-            <div>
+            <div className="code-info">
                 <p>For installation and source code:</p>
-                <a href="#">webpack-starter</a>
+                <a href="https://github.com/sri-rishi/webpack-starter" target="_blank">webpack-starter</a>
             </div>
         </div>
     )
-}
+};
+
+export default Info;
