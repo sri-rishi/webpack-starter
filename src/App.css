@@ -1,12 +1,16 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
 h1 {
     color: yellowgreen;
 }
-
-h2 {
-    color: rebeccapurple;
-}
-
-.logo {
+.logo-box {
     width: 20rem;
 }
 
