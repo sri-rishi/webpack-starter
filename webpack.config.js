@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const EslintWebpackPlugin = require("eslint-webpack-plugin");
 
 const webpackConfig = {
     entry: path.resolve(__dirname, "src", "index.js"),
@@ -23,6 +24,19 @@ const webpackConfig = {
 				}
             }, 
             {
+                test: /\.(js)x?$/,
+                include: path.resolve(__dirname, "src"),
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: [["@babel/preset-react", {"runtime": "automatic"}]]
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"]
             }, 
@@ -37,6 +51,12 @@ const webpackConfig = {
         new HtmlWebpackPlugin({
             title: "Webpack Starter",
             template: path.resolve(__dirname, "src", "index.html")
+        }), 
+
+        new EslintWebpackPlugin({
+            extensions: "js",
+            exclude: "node_modules",
+            files: "src"
         })
     ],
 
